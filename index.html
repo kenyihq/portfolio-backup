@@ -14,22 +14,17 @@
 <body>
     <div class="wrapper" id="index">
         <header class="header">
-            <!-- <nav class="menu" aria-label="main-navigation"> -->
-                <input type="checkbox" name="" id="header__checkbox" class="header__checkbox" />
-                <label for="header__checkbox" class="header__toggle">
-                    <img class="header__toggle-open" src="./icons/open.svg" alt="">
-                    <img class="header__toggle-close" src="./icons/close.svg" alt="">
-                </label>
-                    <ul class="menu__list">
-                        <li><a href="#index"><img src="./icons/logo.svg" alt="Logo" width="155"></a></li>
-                        <div class="nav">
-                            <li><a href="#projects">Proyectos</a></li>
-                            <li><a href="#contact">Hablemos</a></li>
-                            <li><a href="https://cuadernodelprogramador.blogspot.com/" target="_blank">Blog</a></li>
-                        </div>
-                    </ul>
-                    <button class="button"><a href="#certificates">Certificados</a></button>
-            <!-- </nav> -->
+            <a href="#index">
+                <img src="./img/logo.png" alt="Logo" width="155">
+            </a>
+            <nav class="menu" aria-label="main-navigation">
+                <ul>
+                    <li><a href="#projects">Proyectos</a></li>
+                    <li><a href="#contact">Hablemos</a></li>
+                    <li><a href="https://cuadernodelprogramador.blogspot.com/" target="_blank">Blog</a></li>
+                </ul>
+            </nav>
+            <button class="button"><a href="#certificates">Certificados</a></button>
         </header>
     
         <section aria-label="main" class="hero" id="main">
@@ -147,19 +142,6 @@
                     <a href="https://kenyihq.github.io/videoplayer/" target="_blank" class="button">Ver proyecto</a>
                 </div>
             </div>
-            <div class="project">
-                <div class="project-img">
-                    <a href="https://kenyihq.github.io/videoplayer/" target="_blank">
-                        <img src="./img/pokedex.png" alt="VideoPlayer" class="img">
-                    </a>
-                </div>
-                <div class="project-description">
-                    <a href="https://kenyihq.github.io/videoplayer/" target="_blank" class="title">Pokedex</a>
-                    <p>Una Pokedex simple escrita en HTML, CSS y JavaScript, consume la API de <a href="https://pokeapi.co/api/v2/pokemon">PokeAPI.co</a></p>
-                    <a href="https://github.com/kenyihq/pokedex/blob/master/index.html" target="_blank" class="button2">Ver código</a>
-                    <a href="https://kenyihq.github.io/pokedex/" target="_blank" class="button">Ver proyecto</a>
-                </div>
-            </div>
         </section>       
 
         <section id="certificates">
@@ -218,31 +200,11 @@
                     Hecho con el ♥ por Kenyi Hancco
                 </p>
                 <p>
-                    © Copyright 2022 - Todos los derechos reservados.
+                    © Copyright 2021 - Todos los derechos reservados.
                 </p>
             </div>
         </footer>    
     </div>
-    <script>
-        const $form = document.querySelector('#contact')
-
-        $form.addEventListener('submit', handleSubmit)
-
-        async function handleSubmit(event) {
-            event.preventDefault()
-            const form = new FormData(this)
-            const response = await fetch(this.action, {
-                method: this.method,
-                body: form,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            })
-            if (response.ok) {
-                this.reset()
-                alert('Gracias por contactarme, te escribiré pronto 😊')
-            }
-        }
-    </script>    
+    <script src="main.js"></script>    
 </body>
-</html>              
+</html>
